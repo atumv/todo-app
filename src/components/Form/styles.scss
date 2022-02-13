@@ -8,7 +8,7 @@
 .form-container {
   display: inline-block;
   border-radius: 5px;
-  box-shadow: v.$box-shadow;
+  box-shadow: v.$elemShadow;
 
   @media (max-width: v.$tablet) {
     width: 100%;

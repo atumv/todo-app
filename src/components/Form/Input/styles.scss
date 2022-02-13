@@ -1,7 +1,7 @@
 @use 'styles/variables' as v;
 
 .form__input {
-  font-size: 0.9rem;
+  font-size: 1rem;
   width: 12.7rem;
   padding: 0.6rem 1rem;
   background: #fff;
@@ -9,11 +9,11 @@
   border-right-width: 0px;
 
   &::placeholder {
-    color: #bbb;
+    color: v.$form-input-ph;
   }
 
   &:focus::placeholder {
-    color: #ccc;
+    color: v.$form-input-focus-ph;
   }
 
   @media (max-width: v.$tablet) {

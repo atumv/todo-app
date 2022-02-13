@@ -1,5 +1,4 @@
 // breakpoints
-
 $phone: 320px;
 $large-phone: 576px;
 $tablet: 768px;
@@ -7,14 +6,35 @@ $laptop: 992px;
 $desktop: 1170px;
 
 // fonts
-
 $primary-font: 'Fira Sans', 'Noto Sans', 'Open Sans', 'Arial', sans-serif;
 
 // colors
+$body-bg: #f7f8fb;
+$text-color: #333;
+$add-btn-bg: #f7f8fb;
+$add-btn-active-bg: #f0f0f0;
+$save-btn-bg: #fff;
+$save-btn-active-bg: #fafafa;
+$spinner-border-front: rgb(111, 202, 255);
+$spinner-border-back: rgb(111, 202, 255, 0.15);
+$remove-btn: #aaa;
+$remove-btn-hover: #666;
+$form-input-ph: #cccccc;
+$form-input-focus-ph: #d8d8d8;
+$todo-item-title-grey: #999;
+$todo-item-title-grey-hover: #777;
+$todo-item-title-grey-selected: #a7a7a7;
+$todo-item-title-blue: #7b9fcd;
+$todo-item-title-blue-hover: #648bbe;
+$todo-item-title-blue-selected: #7197c7;
+$todo-item-title-green: #53d386;
+$todo-item-title-green-hover: #4abe78;
+$todo-item-title-green-selected: #6bcb91;
 
 // box-shadow
-$box-shadow: 0px 0px 0px hsl(0deg 0% 59% / 0),
+$elemShadow: 0px 0px 0px hsl(0deg 0% 59% / 0),
   0px 0.1px 0.2px hsl(0deg 0% 59% / 0.12),
   0px 0.2px 0.3px hsl(0deg 0% 59% / 0.25),
   0px 0.4px 0.6px hsl(0deg 0% 59% / 0.37),
   0.1px 0.6px 0.9px hsl(0deg 0% 59% / 0.5);
+$inputShadowOnFocus: 0px 0px 0px 3px inset #b9e0ff;

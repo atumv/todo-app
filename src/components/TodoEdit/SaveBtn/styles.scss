@@ -1,15 +1,16 @@
 @use 'styles/variables' as v;
 
 .save-btn {
-  background: #fff;
+  font-size: 1rem;
+  background: v.$save-btn-bg;
   padding: 0.5rem 4rem;
   cursor: pointer;
   border-radius: 5px;
-  color: #333;
-  box-shadow: v.$box-shadow;
+  color: v.$text-color;
+  box-shadow: v.$elemShadow;
 
   &:active {
-    background-color: #f8f8f8;
+    background-color: v.$save-btn-active-bg;
   }
 
   @media (max-width: v.$tablet) {

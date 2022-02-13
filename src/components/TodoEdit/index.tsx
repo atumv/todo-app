@@ -44,11 +44,13 @@ export const TodoEdit: React.FC<TodoEditProps> = ({
       <div className="todo-edit-container">
         <form className="todo-edit__form edit-form" onSubmit={handleFormSubmit}>
           <TextField title={title} handleTextChange={handleTextChange} />
-          <StatusSelect
-            status={status}
-            handleSelectChange={handleSelectChange}
-          />
-          <SaveBtn />
+          <div className="todo-edit__controls">
+            <StatusSelect
+              status={status}
+              handleSelectChange={handleSelectChange}
+            />
+            <SaveBtn />
+          </div>
         </form>
       </div>
     </div>

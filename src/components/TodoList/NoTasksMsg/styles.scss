@@ -1,8 +1,11 @@
+@use 'styles/variables' as v;
+
 .no-tasks {
-  color: #555;
+  color: v.$text-color;
 }
 
 .no-tasks__text {
+  font-size: 1rem;
   margin: 0.3rem 0;
   text-align: center;
 }

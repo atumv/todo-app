@@ -22,12 +22,14 @@
 }
 
 .status-select {
+  font-size: 1rem;
   padding: 0 1rem;
   margin-right: 0.5rem;
   border-radius: 5px;
-  color: #333;
-  height: 34px;
-  box-shadow: v.$box-shadow;
+  color: v.$text-color;
+  height: 35px;
+  background: #fff;
+  box-shadow: v.$elemShadow;
 
   @media (max-width: v.$tablet) {
     text-align: center;

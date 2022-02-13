@@ -1,16 +1,16 @@
 @use 'styles/variables' as v;
 
 .add-btn {
-  font-size: 0.9rem;
+  font-size: 1rem;
   padding: 0.6rem;
-  background-color: #f7f8fb;
+  background-color: v.$add-btn-bg;
   border-radius: 0px 5px 5px 0px;
-  color: #555;
+  color: v.$text-color;
   cursor: pointer;
   transition: background-color 0.2s;
 
   &:active {
-    background-color: #f0f0f0;
+    background-color: v.$add-btn-active-bg;
   }
 
   @media (max-width: v.$tablet) {
@@ -24,4 +24,5 @@
 .add-btn__plus {
   display: inline-block;
   transform: rotate(45deg);
+  user-select: none;
 }

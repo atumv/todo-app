@@ -4,6 +4,10 @@
   width: 100%;
   text-align: end;
 
+  &__controls {
+    margin-top: 0.2rem;
+  }
+
   @media (max-width: v.$tablet) {
     margin-top: 1rem;
     width: 100%;
