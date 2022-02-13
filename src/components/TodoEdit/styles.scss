@@ -1,0 +1,20 @@
+@use 'styles/variables' as v;
+
+.todo-edit {
+  width: 100%;
+  text-align: end;
+
+  @media (max-width: v.$tablet) {
+    margin-top: 1rem;
+    width: 100%;
+    display: block;
+  }
+}
+
+.todo-edit-container {
+  margin-left: 1rem;
+
+  @media (max-width: v.$tablet) {
+    margin-left: 0;
+  }
+}

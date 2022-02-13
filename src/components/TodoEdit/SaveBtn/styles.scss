@@ -1,0 +1,22 @@
+@use 'styles/variables' as v;
+
+.save-btn {
+  background: #fff;
+  padding: 0.5rem 4rem;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #333;
+  box-shadow: v.$box-shadow;
+
+  &:active {
+    background-color: #f8f8f8;
+  }
+
+  @media (max-width: v.$tablet) {
+    float: none;
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+  }
+}

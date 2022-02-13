@@ -1,0 +1,27 @@
+@use 'styles/variables' as v;
+
+.add-btn {
+  font-size: 0.9rem;
+  padding: 0.6rem;
+  background-color: #f7f8fb;
+  border-radius: 0px 5px 5px 0px;
+  color: #555;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:active {
+    background-color: #f0f0f0;
+  }
+
+  @media (max-width: v.$tablet) {
+    width: 100%;
+    padding: 0.9rem 0.8rem 0.8rem 0.8rem;
+    border-radius: 0px 0px 5px 5px;
+    border-top: 0;
+  }
+}
+
+.add-btn__plus {
+  display: inline-block;
+  transform: rotate(45deg);
+}

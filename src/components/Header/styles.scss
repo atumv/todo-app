@@ -1,0 +1,10 @@
+@use 'styles/variables' as v;
+
+.header {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1;
+  color: #333;
+  text-align: center;
+}

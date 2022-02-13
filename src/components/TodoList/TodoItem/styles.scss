@@ -1,0 +1,126 @@
+@use 'styles/variables' as v;
+
+@keyframes fade-out {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #dadaff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  word-break: break-word;
+  border-radius: 5px;
+  animation: fade-out 350ms ease-in;
+  position: relative;
+
+  &__checkbox {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+
+    &:checked ~ .todo-item__title--grey {
+      color: #9b9b9b;
+      font-weight: 600;
+    }
+
+    &:checked ~ .todo-item__title--blue {
+      color: #78a0d1;
+      font-weight: 600;
+    }
+
+    &:checked ~ .todo-item__title--green {
+      color: #6dcb8a;
+      font-weight: 600;
+    }
+  }
+
+  &__number {
+    padding: 0rem 0.3rem;
+    margin-right: 0.5rem;
+    color: #ccc;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  &__title {
+    color: #999;
+    white-space: nowrap;
+    overflow: hidden;
+
+    &--grey {
+      color: #999;
+
+      &:hover {
+        color: #777;
+      }
+    }
+
+    &--blue {
+      color: #7b9fcd;
+
+      &:hover {
+        color: #648bbe;
+      }
+    }
+
+    &--green {
+      color: #4acf5a;
+
+      &:hover {
+        color: #3faf4c;
+      }
+    }
+  }
+
+  &__checkbox-wrap {
+    display: flex;
+    align-items: center;
+    max-width: 82%;
+  }
+
+  &__remove-btn {
+    padding: 0 0.5rem;
+    font-size: 1.6rem;
+    background-color: transparent;
+    color: #aaa;
+    border: 0;
+    transition: color 0.1s linear;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+
+    &:hover {
+      color: #666;
+    }
+
+    @media (max-width: v.$tablet) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 40px;
+    width: 20%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #f7f8fb);
+  }
+
+  @media (max-width: v.$tablet) {
+    font-size: 1rem;
+  }
+}

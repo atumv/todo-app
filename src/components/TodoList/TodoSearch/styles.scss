@@ -1,0 +1,21 @@
+@use 'styles/variables' as v;
+
+.search {
+  position: relative;
+
+  &__input {
+    background: #fff;
+    width: 100%;
+    border-radius: 5px;
+    padding: 0.5rem 2.5rem 0.5rem 0.7rem;
+    box-shadow: v.$box-shadow;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+  }
+}

@@ -1,0 +1,38 @@
+@use 'styles/variables' as v;
+
+.status-select-wrapper {
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 14px;
+    right: 24px;
+    width: 5px;
+    height: 5px;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+    transform: rotate(45deg);
+  }
+
+  @media (max-width: v.$tablet) {
+    display: block;
+  }
+}
+
+.status-select {
+  padding: 0 1rem;
+  margin-right: 0.5rem;
+  border-radius: 5px;
+  color: #333;
+  height: 34px;
+  box-shadow: v.$box-shadow;
+
+  @media (max-width: v.$tablet) {
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    margin-right: 0;
+  }
+}

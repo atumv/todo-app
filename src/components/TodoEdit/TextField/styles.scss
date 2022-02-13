@@ -1,0 +1,11 @@
+@use 'styles/variables' as v;
+
+.todo-edit__text-field {
+  padding: 2rem;
+  width: 100%;
+  height: 300px;
+  border-radius: 5px;
+  resize: none;
+  color: #333;
+  box-shadow: v.$box-shadow;
+}

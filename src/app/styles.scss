@@ -1,0 +1,22 @@
+@use 'styles/variables' as v;
+
+.app {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  padding-bottom: 6rem;
+
+  @media (max-width: v.$tablet) {
+    padding-bottom: 3rem;
+  }
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: row;
+
+  @media (max-width: v.$tablet) {
+    flex-direction: column;
+  }
+}

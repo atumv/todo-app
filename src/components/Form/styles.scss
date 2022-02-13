@@ -1,0 +1,16 @@
+@use 'styles/variables' as v;
+
+.form {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.form-container {
+  display: inline-block;
+  border-radius: 5px;
+  box-shadow: v.$box-shadow;
+
+  @media (max-width: v.$tablet) {
+    width: 100%;
+  }
+}

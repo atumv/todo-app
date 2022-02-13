@@ -1,0 +1,27 @@
+@use 'styles/variables' as v;
+
+.form__input {
+  font-size: 0.9rem;
+  width: 12.7rem;
+  padding: 0.6rem 1rem;
+  background: #fff;
+  border-radius: 5px 0px 0px 5px;
+  border-right-width: 0px;
+
+  &::placeholder {
+    color: #bbb;
+  }
+
+  &:focus::placeholder {
+    color: #ccc;
+  }
+
+  @media (max-width: v.$tablet) {
+    width: 100%;
+    padding: 0.9rem 0.8rem 0.8rem 0.8rem;
+    text-align: center;
+    border-bottom-width: 0px;
+    border-right-width: 1px;
+    border-radius: 5px 5px 0px 0px;
+  }
+}
