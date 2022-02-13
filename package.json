@@ -3,6 +3,7 @@
   "description": "Simple todo application built with React & TypeScript.",
   "version": "0.2.0",
   "author": "atumv",
+  "homepage": "./",
   "private": true,
   "dependencies": {
     "@types/react": "^17.0.39",
