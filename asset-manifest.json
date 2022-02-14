@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "./static/css/main.ee9c8267.css",
-    "main.js": "./static/js/main.1be6cfc7.js",
+    "main.css": "./static/css/main.aea8d8f4.css",
+    "main.js": "./static/js/main.1a020343.js",
     "static/media/FiraSans-Regular.woff": "./static/media/FiraSans-Regular.82221168a0fb5b991884.woff",
     "static/media/FiraSans-Regular.woff2": "./static/media/FiraSans-Regular.52368a8764f323061bd9.woff2",
     "static/media/Search.svg": "./static/media/Search.9eeab7dfee94ce31634aafafe1198a59.svg",
     "index.html": "./index.html",
-    "main.ee9c8267.css.map": "./static/css/main.ee9c8267.css.map",
-    "main.1be6cfc7.js.map": "./static/js/main.1be6cfc7.js.map"
+    "main.aea8d8f4.css.map": "./static/css/main.aea8d8f4.css.map",
+    "main.1a020343.js.map": "./static/js/main.1a020343.js.map"
   },
   "entrypoints": [
-    "static/css/main.ee9c8267.css",
-    "static/js/main.1be6cfc7.js"
+    "static/css/main.aea8d8f4.css",
+    "static/js/main.1a020343.js"
   ]
 }
