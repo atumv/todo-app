@@ -11,12 +11,11 @@ import { TodoList } from 'components/TodoList';
 import { TodoEdit } from 'components/TodoEdit';
 
 const App: React.FC = () => {
-  // Создаем несколько переменных состояния
+  // Создадим переменные состояния
   const [todos, setTodos] = useState<ITodo[]>([]);
-  const [selectedTodo, setSelectedTodo] = useState<any>({});
   const [loading, setLoading] = useState<boolean>(false);
 
-  // Для демонстрационных целей создадим функцию,
+  // Для демонстрационных целей опишем функцию,
   // которая будет загружать заметки со стороннего API
   // и сохранять их в стейт todos со случайными статусами
   const fetchTodos = async (url: string) => {
@@ -43,7 +42,7 @@ const App: React.FC = () => {
     setTimeout(() => fetchTodos(API_URL), 1000);
   }, []);
 
-  // Описываем функции для манипуляции заметками
+  // Далее определим функции для манипуляции заметками
 
   // Функция, позволяющая добавить новую заметку в стейт
   const addTodo = (title: string): void => {
@@ -59,13 +58,11 @@ const App: React.FC = () => {
 
   // Функция, переключающая состояние заметки на «выбрана»
   const selectTodo = (id: number): void => {
-    const todosWithSelected = todos.map((todo) => {
+    const todosWithOneSelected = todos.map((todo) => {
       todo.id === id ? (todo.selected = true) : (todo.selected = false);
       return todo;
     });
-    setTodos(todosWithSelected);
-    const selectedTodo = todos.find((todo) => todo.selected);
-    setSelectedTodo(selectedTodo);
+    setTodos(todosWithOneSelected);
   };
 
   // Функция, выполняющая поиск заметки
@@ -84,13 +81,10 @@ const App: React.FC = () => {
     for (let i = 0; i < newTodos.length; i++) {
       if (!inputValue) {
         setTodos(todosWithNoOneSelected);
-        setSelectedTodo({ title: '', status: '' });
       } else {
         if (newTodos[i].title.match(regex)) {
           newTodos[i].selected = true;
           setTodos(newTodos);
-          const selectedTodo = todos.find((todo) => todo.selected);
-          setSelectedTodo(selectedTodo);
           break;
         } else {
           setTodos(todosWithNoOneSelected);
@@ -106,7 +100,7 @@ const App: React.FC = () => {
     const select = event.currentTarget.select;
 
     const updatedTodos = todos.map((todo) => {
-      if (todo.id === selectedTodo.id) {
+      if (todo.selected) {
         todo.title = textArea.value;
         todo.status = select.value;
       }
@@ -120,10 +114,6 @@ const App: React.FC = () => {
   const removeTodo = (id: number): void => {
     const filteredTodos = todos.filter((todo) => todo.id !== id);
     setTodos(filteredTodos);
-
-    if (id === selectedTodo.id) {
-      setSelectedTodo({ title: '', status: '' });
-    }
   };
 
   // Обработчик, добавляющий новую заметку в стейт при отправке формы
@@ -139,7 +129,7 @@ const App: React.FC = () => {
     <div className="app">
       <Header />
       <Form onSubmit={addNewTodo} />
-      <div className="todo-container">
+      <main className="main">
         <TodoList
           loading={loading}
           todos={todos}
@@ -147,8 +137,8 @@ const App: React.FC = () => {
           selectTodo={selectTodo}
           removeTodo={removeTodo}
         />
-        <TodoEdit selectedTodo={selectedTodo} editTodo={editTodo} />
-      </div>
+        <TodoEdit todos={todos} editTodo={editTodo} />
+      </main>
     </div>
   );
 };

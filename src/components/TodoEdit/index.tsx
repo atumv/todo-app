@@ -7,21 +7,25 @@ import { StatusSelect } from './StatusSelect';
 import { SaveBtn } from './SaveBtn';
 
 interface TodoEditProps {
-  selectedTodo: ITodo;
+  todos: ITodo[];
   editTodo: (event: React.FormEvent<HTMLFormElement>) => void;
 }
 
-export const TodoEdit: React.FC<TodoEditProps> = ({
-  selectedTodo,
-  editTodo,
-}) => {
+export const TodoEdit: React.FC<TodoEditProps> = ({ todos, editTodo }) => {
   const [title, setTitle] = useState<string>('');
   const [status, setStatus] = useState<string>('');
 
   useEffect(() => {
-    setTitle(selectedTodo.title);
-    setStatus(selectedTodo.status);
-  }, [selectedTodo]);
+    const selectedTodo = todos.find((todo) => todo.selected);
+
+    if (!selectedTodo) {
+      setTitle('');
+      setStatus('');
+    } else {
+      setTitle(selectedTodo.title);
+      setStatus(selectedTodo.status);
+    }
+  }, [todos]);
 
   const handleTextChange = (
     event: React.ChangeEvent<HTMLTextAreaElement>
