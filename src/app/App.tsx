@@ -24,8 +24,8 @@ const App: React.FC = () => {
       const todos = await response.json();
 
       const todosWithRandomStatuses = todos.map((todo: ITodo) => {
-        todo.status =
-          todoStatuses[Math.floor(Math.random() * todoStatuses.length)];
+        const randomIndex = Math.floor(Math.random() * todoStatuses.length);
+        todo.status = todoStatuses[randomIndex];
         return todo;
       });
 
