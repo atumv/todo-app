@@ -1,7 +1,6 @@
 # Todo
 
 ![preview](/assets/preview.png)
-
 Simple todo application built with React & TypeScript.
 
 The project is based on [`Create React App`](https://github.com/facebook/create-react-app).
