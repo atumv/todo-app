@@ -29,7 +29,9 @@
   color: v.$text-color;
   height: 35px;
   background: #fff;
-  box-shadow: v.$elemShadow;
+  border-left: v.$elem-border-left;
+  border-right: v.$elem-border-right;
+  border-bottom: v.$elem-border-bottom;
 
   @media (max-width: v.$tablet) {
     text-align: center;

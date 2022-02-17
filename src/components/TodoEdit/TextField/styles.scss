@@ -8,5 +8,7 @@
   border-radius: 5px;
   resize: none;
   color: v.$text-color;
-  box-shadow: v.$elemShadow;
+  border-left: v.$elem-border-left;
+  border-right: v.$elem-border-right;
+  border-bottom: v.$elem-border-bottom;
 }

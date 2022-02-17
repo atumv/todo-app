@@ -7,7 +7,9 @@
   cursor: pointer;
   border-radius: 5px;
   color: v.$text-color;
-  box-shadow: v.$elemShadow;
+  border-left: v.$elem-border-left;
+  border-right: v.$elem-border-right;
+  border-bottom: v.$elem-border-bottom;
 
   &:active {
     background-color: v.$save-btn-active-bg;

@@ -9,7 +9,9 @@
     width: 100%;
     border-radius: 5px;
     padding: 0.5rem 2.5rem 0.5rem 0.7rem;
-    box-shadow: v.$elemShadow;
+    border-left: v.$elem-border-left;
+    border-right: v.$elem-border-right;
+    border-bottom: v.$elem-border-bottom;
   }
 
   &__icon {

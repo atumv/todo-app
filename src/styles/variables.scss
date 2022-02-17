@@ -30,11 +30,9 @@ $todo-item-title-blue-selected: #7197c7;
 $todo-item-title-green: #53d386;
 $todo-item-title-green-hover: #4abe78;
 $todo-item-title-green-selected: #6bcb91;
+$elem-border-left: 1px solid #f3f3f3;
+$elem-border-right: 1px solid #f3f3f3;
+$elem-border-bottom: 1px solid #e1e1e1;
 
 // box-shadow
-$elemShadow: 0px 0px 0px hsl(0deg 0% 59% / 0),
-  0px 0.1px 0.2px hsl(0deg 0% 59% / 0.12),
-  0px 0.2px 0.3px hsl(0deg 0% 59% / 0.25),
-  0px 0.4px 0.6px hsl(0deg 0% 59% / 0.37),
-  0.1px 0.6px 0.9px hsl(0deg 0% 59% / 0.5);
 $inputShadowOnFocus: 0px 0px 0px 3px inset #b9e0ff;
